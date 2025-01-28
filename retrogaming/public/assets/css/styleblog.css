@@ -1,0 +1,420 @@
+/*----------------Article section----------------*/
+
+.article h3 {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.article-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px 50px;
+  margin: 15px 15px;
+}
+
+.article-content .text {
+  flex: 2;
+  flex-wrap: wrap;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.article-content .image {
+  flex: 1;
+}
+
+.article-content img {
+  width: 270px;
+  height: 230px;
+}
+
+.article {
+  padding: 15px;
+  background: #3b589898;
+}
+
+/*--------------Comments Section----------------*/
+
+.comments-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 1px 10px 15px rgb(59, 89, 152);
+  font-family: "Lora", serif;
+  color: #3b5998;
+}
+
+.existing-comments,
+.new-comment {
+  flex: 1;
+}
+
+.comment {
+  margin-bottom: 20px;
+}
+
+.comment p {
+  font-family: sans-serif;
+  color: #333;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-author {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+.star-rating span {
+  color: gold;
+  font-size: 18px;
+}
+
+.star-rating.read-only {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.new-comment form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-comment input,
+.new-comment textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.new-comment textarea {
+  resize: vertical;
+}
+
+.star-rating-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.star-rating-input .stars {
+  display: flex;
+  gap: 5px;
+  margin-left: 10px;
+}
+
+.star-rating-input input {
+  display: none;
+}
+
+.star-rating-input label {
+  font-size: 24px;
+  color: rgb(169, 169, 169);
+  cursor: pointer;
+}
+
+.star-rating-input label:hover {
+  color: gold;
+}
+
+/*--------------Image edit article--------------*/
+
+.form-group img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  display: block;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/*-----------------Pictures---------------------*/
+
+.gallery {
+  display: flex;
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border: 2px solid rgb(245, 179, 57);
+  border-radius: 8px;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: scale(0.5);
+  animation: fadeZoom 2s ease forwards;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/*------------Animation of pictures-------------*/
+
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.autonom {
+  font-family: sans-serif;
+  font-weight: 800;
+  text-align: center;
+  font-size: 16px;
+  color: rgb(128, 28, 243);
+  line-height: 5px;
+}
+
+.modele {
+  width: 100%;
+}
+
+/*------------Administrator table--------------*/
+
+.table {
+  width: 100%;
+  margin: auto;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f8f9fa;
+}
+
+.table td {
+  word-wrap: break-word;
+}
+
+/*----------------Medias Queries Tablettes---------------------*/
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  /*---------------Home page-----------------*/
+
+  .article-content {
+    margin: 0 15px;
+  }
+
+  .alert,
+  .card-text {
+    font-size: 16px;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  /*-----------------Header---------------*/
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2,
+  .profil-text {
+    font-size: 1.2rem;
+  }
+
+  .nav-links li {
+    margin: 0 0.44rem;
+  }
+
+  .dropdown-content {
+    right: -6vw;
+  }
+
+  /*-------Image edit article----------*/
+  
+  .form-group img {
+    max-height: 150px;
+  }
+
+}
+
+/*------------Medias Queries Smartphones--------------*/
+
+@media (max-width: 768px) {
+
+  /*-----------------Home page----------------*/
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .alert {
+    font-size: 12px;
+  }
+
+  .intro {
+    font-size: 14px;
+  }
+
+  #pseudo {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+
+  .lead {
+    font-size: 14px;
+  }
+
+  /*--------Article content home page--------*/
+
+  .article-content {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .article-content img {
+    width: 250px;
+    height: 200px;
+  }
+
+  .gallery img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .gallery {
+    display: block;
+  }
+
+  /*--------------Comments---------------*/
+
+  .comments-section {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .new-comment input,
+  .new-comment textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /*----------Stars comments------------*/
+
+  .star-rating {
+    gap: 0;
+  }
+
+  .star-rating label {
+    padding: 0;
+  }
+
+  /*-------Image edit article----------*/
+
+  .form-group img {
+    max-height: 100px;
+  }
+
+  /*-------Administrator Page----------*/
+
+  .table {
+    font-size: 0.7rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 5px;
+  }
+
+  .btn {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+  }
+
+  /*----------Buttons table----------*/
+
+  .btn {
+    margin: 2px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+
+  .btn-sm {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  /*---------Forms spacing----------*/
+
+  form {
+    margin-top: 12px;
+    margin-bottom: 10px;
+  }
+
+  .mobile-table {
+    display: none;
+  }
+
+  .button-mobile {
+    font-size: 0.7rem;
+  }
+
+  /*-----------Profil-------------*/
+
+  .profil-text {
+    font-size: 18px;
+  }
+
+  /*-----------Footer-------------*/
+
+  footer {
+    font-size: 15px;
+  }
+
+  #scroll-to-top {
+    bottom: 100px;
+  }
+
+  #random-image-1 img,
+  #random-image-2 img {
+    height: auto;
+    max-height: 50px;
+  }
+
+  .retro {
+    font-size: 14px;
+  }
+
+}
